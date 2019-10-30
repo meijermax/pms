@@ -30,6 +30,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
+        $this->middleware(['role:superadmin']);
         return view('projects.create');
     }
 

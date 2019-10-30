@@ -25,6 +25,7 @@
 
                         <a class="btn btn-success" href="{{ route('projects.index') }}"> Project overview</a>
                         <a class="btn btn-success" href="{{ route('projects.create') }}"> Create New Project</a>
+
                     </div>
                 </div>
             </div>

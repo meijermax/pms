@@ -15,7 +15,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
+
+Route::get('projects','ProjectController@index');
+Route::post('projects','ProjectController@store');
+Route::get('projects/create','ProjectController@create')->middleware('permission:edit role');
+Route::get('projects/{project}','ProjectController@show')->middleware('role:admin');
+Route::put('projects/{project}','ProjectController@update');
+Route::get('projects/{project}','ProjectController@destroy');
+Route::get('projects/{project}/edit','ProjectController@edit');
+
+
+
+
+//
+//Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
+//Route::resource('projects','ProjectController')->middleware('auth');;
 
 Auth::routes();
 

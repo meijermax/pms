@@ -26,7 +26,7 @@
                         <a class="btn btn-primary" href="{{ route('projects.index') }}"> Project overview</a>
                         <a class="btn btn-secondary" href="{{ route('projects.create') }}"> Create New Project</a>
                         @role('admin')
-                        <a class="btn btn-info" href="/index"> Project overview</a>
+                        <a class="btn btn-info" href="/index"> User List</a>
                         @endrole
                     </div>
                 </div>

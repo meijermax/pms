@@ -23,9 +23,11 @@
                 <div class="card-header">Projects</div>
                     <div class="card-body">
 
-                        <a class="btn btn-success" href="{{ route('projects.index') }}"> Project overview</a>
-                        <a class="btn btn-success" href="{{ route('projects.create') }}"> Create New Project</a>
-
+                        <a class="btn btn-primary" href="{{ route('projects.index') }}"> Project overview</a>
+                        <a class="btn btn-secondary" href="{{ route('projects.create') }}"> Create New Project</a>
+                        @role('admin')
+                        <a class="btn btn-info" href="/index"> Project overview</a>
+                        @endrole
                     </div>
                 </div>
             </div>
